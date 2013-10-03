@@ -1,0 +1,68 @@
+NAME
+    SHARYANTO::Data::Util - Data utilities
+
+VERSION
+    version 0.56
+
+SYNOPSIS
+DESCRIPTION
+SEE ALSO
+    Data::Structure::Util has the XS/C version of "has_circular_ref" which
+    is 3 times or more faster than this module's implementation which is
+    pure Perl). Use that instead if possible (in some cases,
+    Data::Structure::Util fails to build and this module provides an
+    alternative for that function).
+
+    This module is however much faster than Devel::Cycle.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
+FUNCTIONS
+    None are exported by default, but they are exportable.
+
+  clone_circular_refs(@args) -> any
+    For example, this data:
+
+        $x = [1];
+        $data = [$x, 2, $x];
+
+    contains circular references by referring to $x twice. After
+    "clone_circular_refs", data will become:
+
+        $data = [$x, 2, [1]];
+
+    that is, the subsequent circular references will be deep-copied. This
+    makes it safe to transport to JSON, for example.
+
+    Sometimes it doesn't work, for example:
+
+        $data = [1];
+        push @$data, $data;
+
+    Cloning will still create circular references.
+
+    This function modifies the data structure in-place, and return true for
+    success and false upon failure.
+
+    Arguments ('*' denotes required arguments):
+
+    *   data* => *any*
+
+    Return value:
+
+  has_circular_ref(@args) -> any
+    Does not deal with weak references.
+
+    Arguments ('*' denotes required arguments):
+
+    *   data* => *any*
+
+    Return value:
+
