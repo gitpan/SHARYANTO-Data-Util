@@ -6,6 +6,7 @@ META.json
 META.yml
 Makefile.PL
 README
+build.log
 dist.ini
 lib/SHARYANTO/Data/Util.pm
 t/00-compile.t

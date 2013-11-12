@@ -36,6 +36,7 @@
       },
       "test" : {
          "requires" : {
+            "File::Spec" : "0",
             "IO::Handle" : "0",
             "IPC::Open3" : "0",
             "Test::More" : "0.98"
@@ -44,11 +45,16 @@
    },
    "release_status" : "stable",
    "resources" : {
-      "homepage" : "http://metacpan.org/release/SHARYANTO-Data-Util/",
+      "bugtracker" : {
+         "web" : "https://rt.cpan.org/Public/Dist/Display.html?Name=SHARYANTO-Data-Util"
+      },
+      "homepage" : "https://metacpan.org/release/SHARYANTO-Data-Util",
       "repository" : {
-         "url" : "http://github.com/sharyanto/perl-SHARYANTO-Data-Util"
+         "type" : "git",
+         "url" : "git://github.com/sharyanto/perl-SHARYANTO-Data-Util.git",
+         "web" : "https://github.com/sharyanto/perl-SHARYANTO-Data-Util"
       }
    },
-   "version" : "0.56"
+   "version" : "0.57"
 }
 

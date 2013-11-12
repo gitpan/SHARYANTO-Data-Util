@@ -3,6 +3,7 @@ abstract: 'Data utilities'
 author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
+  File::Spec: 0
   IO::Handle: 0
   IPC::Open3: 0
   Test::More: 0.98
@@ -20,6 +21,7 @@ requires:
   Data::Structure::Util: 0
   perl: 5.010001
 resources:
-  homepage: http://metacpan.org/release/SHARYANTO-Data-Util/
-  repository: http://github.com/sharyanto/perl-SHARYANTO-Data-Util
-version: 0.56
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=SHARYANTO-Data-Util
+  homepage: https://metacpan.org/release/SHARYANTO-Data-Util
+  repository: git://github.com/sharyanto/perl-SHARYANTO-Data-Util.git
+version: 0.57

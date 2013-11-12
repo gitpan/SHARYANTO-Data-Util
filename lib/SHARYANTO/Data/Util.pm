@@ -9,7 +9,7 @@ require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(clone_circular_refs has_circular_ref);
 
-our $VERSION = '0.56'; # VERSION
+our $VERSION = '0.57'; # VERSION
 
 our %SPEC;
 
@@ -137,7 +137,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -145,31 +145,11 @@ SHARYANTO::Data::Util - Data utilities
 
 =head1 VERSION
 
-version 0.56
+version 0.57
 
 =head1 SYNOPSIS
 
 =head1 DESCRIPTION
-
-=head1 SEE ALSO
-
-L<Data::Structure::Util> has the XS/C version of C<has_circular_ref> which is 3
-times or more faster than this module's implementation which is pure Perl). Use
-that instead if possible (in some cases, Data::Structure::Util fails to build
-and this module provides an alternative for that function).
-
-This module is however much faster than L<Devel::Cycle>.
-
-=head1 AUTHOR
-
-Steven Haryanto <stevenharyanto@gmail.com>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2013 by Steven Haryanto.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
 
 =head1 FUNCTIONS
 
@@ -224,5 +204,43 @@ Arguments ('*' denotes required arguments):
 =back
 
 Return value:
+
+=head1 SEE ALSO
+
+L<SHARYANTO>
+
+L<Data::Structure::Util> has the XS/C version of C<has_circular_ref> which is 3
+times or more faster than this module's implementation which is pure Perl). Use
+that instead if possible (in some cases, Data::Structure::Util fails to build
+and this module provides an alternative for that function).
+
+This module is however much faster than L<Devel::Cycle>.
+
+=head1 HOMEPAGE
+
+Please visit the project's homepage at L<https://metacpan.org/release/SHARYANTO-Data-Util>.
+
+=head1 SOURCE
+
+Source repository is at L<https://github.com/sharyanto/perl-SHARYANTO-Data-Util>.
+
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website L<https://rt.cpan.org/Public/Dist/Display.html?Name=SHARYANTO-Data-Util>
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
+=head1 AUTHOR
+
+Steven Haryanto <stevenharyanto@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Steven Haryanto.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
